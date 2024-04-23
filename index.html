@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Protection</title>
+    <script>
+        function validatePassword() {
+            var password = document.getElementById("password").value;
+            // Set your desired password here
+            var correctPassword = "144394";
+            if (password === correctPassword) {
+                // Redirect to the other HTML file if password is correct
+                window.location.href = "redirect.html";
+            } else {
+                // Alert user if password is incorrect
+                alert("Incorrect password. Please try again.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Enter Password</h2>
+    <form>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <input type="button" value="Submit" onclick="validatePassword()">
+    </form>
+</body>
+</html>
